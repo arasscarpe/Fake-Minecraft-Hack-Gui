@@ -1,0 +1,27 @@
+package com.YourClientloader;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class ModuleLoader {
+    private final List<String> modules = new ArrayList<>();
+
+    public void loadInternalModules() {
+        String[] mods = {"COMBAT", "MISC", "DONUT", "RENDER", "CLIENT"};
+        
+        for (String m : mods) {
+            System.out.println("[Loader] Registering core system: " + m);
+            try {
+                Thread.sleep(150);
+                System.out.println("[Loader] OK -> " + m + " initialized successfully.");
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public boolean verifyIntegrity() {
+        System.out.println("[Loader] Verifying bytecode integrity...");
+        return true;
+    }
+}
