@@ -25,9 +25,6 @@ pip install PyQt5 psutil
 Installation
 Clone the repository:
 
-Bash
-git clone https://github.com/YourUsername/YourClient.git
-Navigate to the directory:
 
 Bash
 cd YourClient
