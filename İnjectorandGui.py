@@ -14,7 +14,7 @@ class ClientState(QObject):
 
 state = ClientState()
 
-class VertexLoader:
+class YourClientLoader:
     def __init__(self):
         self.root = Tk()
         self.root.overrideredirect(True)
@@ -197,7 +197,7 @@ class CheatMenu(QWidget):
             p = DraggablePanel(cat, items, self)
             p.move(x, 100); x += 220
 
-class VertexOverlay(QWidget):
+class YourClientOverlay(QWidget):
     def __init__(self):
         super().__init__()
         self.menu = CheatMenu()
@@ -216,8 +216,9 @@ class VertexOverlay(QWidget):
 
 def run_main_app():
     app = QApplication(sys.argv)
-    ex = VertexOverlay()
+    ex = YourClientOverlay()
     sys.exit(app.exec_())
 
 if __name__ == '__main__':
-    VertexLoader()
+    YourClientLoader()
+
